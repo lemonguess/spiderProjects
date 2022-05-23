@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单的使用</title>
+</head>
+<body>
+<!--action提交的地址 method提交时候的方法
+有get 和 post 两种方法
+默认使用 get
+-->
+<form action="#" >
+<!--input 输入元素 多数情况会用到 type一共15 text文本类型-->
+<!--name 是指定表单元素的名称 不写后接收不到-->
+    用户名:<input type="text" placeholder="请输入用户名" name="user"> <br>
+    密&emsp;码:<input type="password" placeholder="请输入密码" name="pwd"> <br>
+<!-- 单选框-->
+<!-- name属性要设置 -->
+<!-- 用户去选择的加value值 用户输入的不要加 checked默认 disabled禁用-->
+    性&emsp;别:<input type="radio" name="sex" value="nan" checked>男
+                <input type="radio" name="sex" value="nv">女
+                <input type="radio" name="sex" value="baomi" id="box">
+                <!--label 必须要id 增强鼠标可用性 -->
+                    <label for="box">保密</label>
+    <br>
+    爱好:<input type="checkbox" value="dwz" name="dwz1"> 打王者
+        <input type="checkbox" value="pb" name="pb1"> 跑步
+        <input type="checkbox" value="ds" name="ds1" disabled>  读书 <br>
+
+    籍贯: <select name="jg" id="" size="2">
+    <optgroup label="湖南">
+        <option value="sh">上海</option>
+        <option value="bj">北京</option>
+        <option value="cs" selected>长沙</option>
+    </optgroup>
+</select> <br>
+    <fieldset>
+<!-- 分组表单的标题-->
+        <legend>健康信息</legend>
+        体重: <input type="text">
+    </fieldset>
+<!--文本域-->
+    其他: <textarea name="qit" id="a" cols="10" rows="10"></textarea> <br>
+<!--  accept设置提交是文件的格式  -->
+    头像: <input type="file" accept="image/*"> <br>
+    隐藏域: <input type="hidden"> <br>
+
+    <input type="submit" value="提交">
+    <input type="reset" value="重置">
+    <input type="button" value="按钮">
+</form>
+<button>123</button>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js1work</title>
+    <style>
+        div{
+            margin-bottom: 30px;margin-left: 200px;
+        }
+        div input[type="text"]{
+            margin-bottom: 10px;
+            height: 30px;
+        }
+        div input[type="button"]{
+            width: 100px;
+            height: 30px;
+            margin-left: 30px;
+        }
+        .box{
+            width: 400px;
+            height: 400px;
+            background: orange;
+            text-align: center;
+            line-height: 400px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    属&emsp;性:<input type="text" placeholder="请输入你的属性"> <br>
+    属性值:<input type="text" placeholder="请输入属性值">
+</div>
+<div>
+<input type="button" value="设置属性">
+</div>
+<div class="box">鲸落老师也很帅</div>
+<script>
+    var Ipu =document.querySelectorAll("div input[type=\"button\"]");
+    var aBox =document.querySelectorAll("div input[type=\"text\"]");
+    var aDiv = document.getElementsByClassName("box")[0];
+    Ipu[0].onclick=function () {
+        var key = aBox[0].value;
+        var val = aBox[1].value;
+        aDiv.style[key] = val;
+        aDiv.style.cssText=key+":"+val;
+        aDiv.setAttribute("style",key+":"+val);
+        aBox[0].value="";
+        aBox[1].value="";
+    }
+</script>
+</body>
+</html>

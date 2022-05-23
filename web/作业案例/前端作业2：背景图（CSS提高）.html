@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>work2</title>
+    <style>
+        *{
+            margin:0;
+            pading:0;
+        }
+        div{
+            width: 1000px;
+            height: 500px;
+            border:1px solid red;
+            margin:50px auto;
+            position: relative;
+        }
+        div img{
+            width: 1000px;
+            height: 500px;
+            margin-left: -40px;
+
+        }
+        li{
+            list-style: none;
+        }
+        div .tab{
+            position: absolute;
+            left:50%;
+            bottom: 50px;
+            margin-left: -80px;
+        }
+        div .tab li{
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            margin:10px;
+            float: left;
+            cursor:pointer;
+            text-align: center;
+        }
+        div .btn li{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            font-size:25px;
+            position: absolute;
+            top:50%;
+        }
+        div .btn .left{
+            left:0;
+            margin-left: -42px;
+
+        }
+        div .btn .right{
+            right:0;
+            margin-right: -52px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul class="pic">
+        <li><img src="00.jpg"></li>
+    </ul>
+    <ul class="tab">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="btn">
+        <li class="left">&lt;</li>
+        <li class="right">&gt;</li>
+    </ul>
+</div>
+</body>
+</html>

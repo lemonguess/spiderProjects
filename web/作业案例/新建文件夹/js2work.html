@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js2work</title>
+    <style>
+        li{
+            list-style: none;
+        }
+        .pic li img{
+            width: 700px;
+            height: 500px;
+        }
+        .tab{
+            overflow: hidden;
+        }
+        .tab li{
+            float: left;
+            background: #45641b;
+            width: 100px;
+            height: 50px;
+            margin: 20px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .pic img{
+            display: none;
+        }
+        .pic .show img{
+            display: block ;
+        }
+        .tab .on{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+
+<ul class="tab">
+    <li class="on">图片1</li>
+    <li>图片2</li>
+    <li>图片3</li>
+    <li>图片4</li>
+</ul>
+<ul class="pic">
+    <li class="show"><img src="1.png" alt=""></li>
+    <li><img src="2.png" alt=""></li>
+    <li><img src="3.png" alt=""></li>
+    <li><img src="4.png" alt=""></li>
+</ul>
+<script>
+    var aTab = document.querySelectorAll(".tab li");
+    var aPic = document.querySelectorAll(".pic li");
+    var len =aTab.length;
+    var fir =0;
+/*    for (var i =0;i<len;i++){
+        aTab[i].index=i;
+        aTab[i].onclick=function () {
+            for (var j=0;j<len ;j++){
+                aPic[j].className="";
+                aTab[j].className="";
+            }
+            aTab[this.index].className="on";
+            aPic[this.index].className="show";
+        }
+    }*/
+    for (var i =0;i<len;i++){
+        aTab[i].index=i;
+        aTab[i].onclick=function () {
+            aTab[fir].className="";
+            aPic[fir].className="";
+            fir= this.index;
+            aTab[fir].className="on";
+            aPic[fir].className="show";
+        }
+    }
+</script>
+</body>
+</html>

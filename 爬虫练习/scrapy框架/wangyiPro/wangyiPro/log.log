@@ -1,0 +1,62 @@
+2021-07-19 11:03:23 [scrapy.core.scraper] ERROR: Spider error processing <GET https://news.163.com/> (referer: None)
+Traceback (most recent call last):
+  File "d:\softwarespace\python\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "d:\softwarespace\python\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "d:\softwarespace\python\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "d:\softwarespace\python\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "d:\softwarespace\python\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "d:\softwarespace\python\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "d:\softwarespace\python\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\softwarespace\python\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "d:\softwarespace\python\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\softwarespace\python\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "d:\softwarespace\python\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\softwarespace\python\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "D:\WorkSpace\pycharm\爬虫练习\scrapy框架\wangyiPro\wangyiPro\spiders\wangyi.py", line 28, in parse
+    modle_url = li_list[index].xpath('./a/@href').extract_first()
+  File "d:\softwarespace\python\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+IndexError: list index out of range
+2021-07-19 11:16:37 [scrapy.core.scraper] ERROR: Spider error processing <GET https://news.163.com/> (referer: None)
+Traceback (most recent call last):
+  File "d:\softwarespace\python\lib\site-packages\scrapy\utils\defer.py", line 120, in iter_errback
+    yield next(it)
+  File "d:\softwarespace\python\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "d:\softwarespace\python\lib\site-packages\scrapy\utils\python.py", line 353, in __next__
+    return next(self.data)
+  File "d:\softwarespace\python\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "d:\softwarespace\python\lib\site-packages\scrapy\spidermiddlewares\offsite.py", line 29, in process_spider_output
+    for x in result:
+  File "d:\softwarespace\python\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "d:\softwarespace\python\lib\site-packages\scrapy\spidermiddlewares\referer.py", line 342, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "d:\softwarespace\python\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "d:\softwarespace\python\lib\site-packages\scrapy\spidermiddlewares\urllength.py", line 40, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\softwarespace\python\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "d:\softwarespace\python\lib\site-packages\scrapy\spidermiddlewares\depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "d:\softwarespace\python\lib\site-packages\scrapy\core\spidermw.py", line 56, in _evaluate_iterable
+    for r in iterable:
+  File "D:\WorkSpace\pycharm\爬虫练习\scrapy框架\wangyiPro\wangyiPro\spiders\wangyi.py", line 28, in parse
+    modle_url = li_list[index].xpath('./a/@href').extract_first()
+  File "d:\softwarespace\python\lib\site-packages\parsel\selector.py", line 70, in __getitem__
+    o = super(SelectorList, self).__getitem__(pos)
+IndexError: list index out of range

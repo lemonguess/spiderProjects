@@ -1,0 +1,76 @@
+2021-08-02 06:03:16 [scrapy.core.scraper] ERROR: Error processing {'city': '南京',
+ 'lazyimg': '//img5.taoche.cn/31/02171gc4w3.jpg',
+ 'mileage': '4.00万公里',
+ 'price': '32.50',
+ 'resisted_data': '2018年',
+ 'title': '奥迪A5 2017款 Sportback 45 TFSI 时尚版'}
+Traceback (most recent call last):
+  File "d:\softwarespace\python\lib\site-packages\twisted\internet\defer.py", line 662, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "d:\softwarespace\python\lib\site-packages\scrapy\utils\defer.py", line 150, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "D:\WorkSpace\pycharm\爬虫练习\scrapy框架\FirstBlood\taochePro\taochePro\pipelines.py", line 12, in process_item
+    self.monggoDB.insert(dict(item))#mongoDB插入字典数据
+  File "D:\WorkSpace\pycharm\爬虫练习\scrapy框架\FirstBlood\taochePro\MyMongoDB.py", line 13, in insert
+    self.col.insert_one(data) if onlyOne else  self.col.insert_many(data)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\collection.py", line 701, in insert_one
+    session=session),
+  File "d:\softwarespace\python\lib\site-packages\pymongo\collection.py", line 615, in _insert
+    bypass_doc_val, session)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\collection.py", line 603, in _insert_one
+    acknowledged, _insert_command, session)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\mongo_client.py", line 1497, in _retryable_write
+    with self._tmp_session(session) as s:
+  File "d:\softwarespace\python\lib\contextlib.py", line 82, in __enter__
+    return next(self.gen)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\mongo_client.py", line 1829, in _tmp_session
+    s = self._ensure_session(session)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\mongo_client.py", line 1816, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\mongo_client.py", line 1766, in __start_session
+    server_session = self._get_server_session()
+  File "d:\softwarespace\python\lib\site-packages\pymongo\mongo_client.py", line 1802, in _get_server_session
+    return self._topology.get_server_session()
+  File "d:\softwarespace\python\lib\site-packages\pymongo\topology.py", line 499, in get_server_session
+    None)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\topology.py", line 217, in _select_servers_loop
+    (self._error_message(selector), timeout, self.description))
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。, Timeout: 30s, Topology Description: <TopologyDescription id: 61071a045121dc721e1651fc, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)>]>
+2021-08-02 06:03:46 [scrapy.core.scraper] ERROR: Error processing {'city': '南京',
+ 'lazyimg': '//img5.taoche.cn/31/02171gc4w3.jpg',
+ 'mileage': '5.00万公里',
+ 'price': '18.50',
+ 'resisted_data': '2019年',
+ 'title': '奥迪Q3 2018款 30周年纪念版 35 TFSI 时尚版'}
+Traceback (most recent call last):
+  File "d:\softwarespace\python\lib\site-packages\twisted\internet\defer.py", line 662, in _runCallbacks
+    current.result = callback(current.result, *args, **kw)
+  File "d:\softwarespace\python\lib\site-packages\scrapy\utils\defer.py", line 150, in f
+    return deferred_from_coro(coro_f(*coro_args, **coro_kwargs))
+  File "D:\WorkSpace\pycharm\爬虫练习\scrapy框架\FirstBlood\taochePro\taochePro\pipelines.py", line 12, in process_item
+    self.monggoDB.insert(dict(item))#mongoDB插入字典数据
+  File "D:\WorkSpace\pycharm\爬虫练习\scrapy框架\FirstBlood\taochePro\MyMongoDB.py", line 13, in insert
+    self.col.insert_one(data) if onlyOne else  self.col.insert_many(data)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\collection.py", line 701, in insert_one
+    session=session),
+  File "d:\softwarespace\python\lib\site-packages\pymongo\collection.py", line 615, in _insert
+    bypass_doc_val, session)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\collection.py", line 603, in _insert_one
+    acknowledged, _insert_command, session)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\mongo_client.py", line 1497, in _retryable_write
+    with self._tmp_session(session) as s:
+  File "d:\softwarespace\python\lib\contextlib.py", line 82, in __enter__
+    return next(self.gen)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\mongo_client.py", line 1829, in _tmp_session
+    s = self._ensure_session(session)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\mongo_client.py", line 1816, in _ensure_session
+    return self.__start_session(True, causal_consistency=False)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\mongo_client.py", line 1766, in __start_session
+    server_session = self._get_server_session()
+  File "d:\softwarespace\python\lib\site-packages\pymongo\mongo_client.py", line 1802, in _get_server_session
+    return self._topology.get_server_session()
+  File "d:\softwarespace\python\lib\site-packages\pymongo\topology.py", line 499, in get_server_session
+    None)
+  File "d:\softwarespace\python\lib\site-packages\pymongo\topology.py", line 217, in _select_servers_loop
+    (self._error_message(selector), timeout, self.description))
+pymongo.errors.ServerSelectionTimeoutError: 127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。, Timeout: 30s, Topology Description: <TopologyDescription id: 61071a045121dc721e1651fc, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [WinError 10061] 由于目标计算机积极拒绝，无法连接。',)>]>

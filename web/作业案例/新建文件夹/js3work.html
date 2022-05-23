@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js3work</title>
+    <style>
+        .box1{
+            background: yellow;
+            width: 500px;
+            height: 100px;
+            margin-bottom: 20px;
+            text-align: center;
+            line-height: 100px;
+        }
+        .box{
+            background: yellow;
+            width: 500px;
+            height: 100px;
+            /*margin-bottom: 20px;*/
+            text-align: center;
+            line-height: 100px;
+        }
+        p{
+            font-size: 20px;
+            color: red;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    敌军还有<span id="id1">5</span>秒达到战场
+</div>
+<div class="box"></div>
+<script>
+    var oBox = document.querySelector(".box1");
+    var aBox = document.querySelector(".box");
+    var aTime = document.querySelector("#id1");
+    var num=5;
+    var timer= setInterval(function () {
+        num--;
+        aTime.innerHTML=num;
+        if (num===0){
+            clearInterval(timer);
+            oBox.innerHTML="<p>碾碎他们！</p>";
+            clearInterval(time)
+        }
+    },1000);
+    function func() {
+        var data = new Date();
+        var year = data.getFullYear(); //年
+        var month = data.getMonth()+1; // 月 月份从0开始
+        var date = data.getDate(); // 日
+        var hour = data.getHours(); // 小时
+        var min = data.getMinutes(); // 分钟
+        var sec = data.getSeconds(); // 秒
+        var day = data.getDay(); // 星期
+
+        function f(n) {
+            if (n<10){
+                n = "0"+n;
+            }
+            return  n;
+        }
+        hour = f(hour);
+        min = f(min);
+        sec = f(sec);
+        aBox.innerHTML=year+"年"+month+"月"+date+"日"+hour+"时"+min+"分"+sec+"秒"+"星期"+day;
+    }
+    func();
+   var time = setInterval(func,1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css字体</title>
+    <style>
+        /*html{
+            font-size: 30px;
+        }*/
+        .jl1{
+            /*设置字体和大小windows 默认微软雅黑 谷歌默认16px*/
+            font-family: 宋体;
+            /*px 字体大小单位 rem 相对于HTML的字体大小
+            em 是使用父级的字体大小 自己有就用自己
+            % 相对于父容器的字体进行%调整
+            */
+            /*font-size: 10px;*/
+            /*width: 2em;*/
+        }
+        .jl2{
+            /*字体粗细 */
+            /*normal 400 默认大小  lighter更细 100 bold加粗 700 bolder很粗900 */
+            font-weight: 100;
+        }
+        .jl3{
+            /*normal 默认 italic斜体 属性 有些文字不具备斜体样式没有的话设置这个没用 oblique斜体*/
+            font-style: oblique;
+        }
+        .jl4{
+            /*1 英文单词
+              2 16进制(0-9 a-f)
+              3 rgb red green blue 颜色对照表
+              4 rgba alpha透明度
+            */
+            color:rgba(67,205,128,0.1);
+        }
+        .jl6{
+            /*复合样式 至少保留size family 必须按顺序来*/
+            /*size family*/
+            /*font: 20px 楷体 ;*/
+            /*style size family*/
+            /*font:italic 20px 楷体 ;*/
+            /*style weight size family*/
+            /*font:italic 900 20px 楷体  ;*/
+            /*style variant(小型大写字母) weight size family*/
+            font:italic small-caps 900 20px 楷体 ;
+
+        }
+    </style>
+</head>
+<body>
+<!--div[class=jl$]{我是一个div标签$}*9 快捷键-->
+<div class="jl1">我是一个div标签1</div>
+<div class="jl2">我是一个div标签2</div>
+<div class="jl3">我是一个div标签3</div>
+<div class="jl4">我是一个div标签4</div>
+<div class="jl5">我是一个div标签5</div>
+<div class="jl6">asdasdasdas</div>
+<div class="jl7">我是一个div标签7</div>
+<div class="jl8">我是一个div标签8</div>
+<div class="jl9">我是一个div标签9</div>
+</body>
+</html>

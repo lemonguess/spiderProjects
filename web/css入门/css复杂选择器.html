@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css复杂选择器</title>
+    <style>
+        /*群组选择器 逗号隔开 同时对多个标签设置样式*/
+        /*h1,h2,span,.cls1{
+            color: green;
+        }*/
+    /*  兄弟选择器 ~表示 p后面的span都会选中 同级 具有相同父元素 */
+       /* p~span{
+            color: red;
+        }*/
+    /*  相邻兄弟选择器 +表示 必须相邻 */
+        /*p+span{
+            color: blueviolet;
+        }*/
+        /*后代选择器 空格表示 做用于所有满足条件后代*/
+        /*p span{
+            color: red;
+        }*/
+        /*子代选择器 >表示 只会作用于子代 不会作用孙子辈 子代的颜色和字体可以被继承*/
+        /*p>span{
+            color: burlywood;
+        }*/
+        /*.ul1>li{
+                !*list-style: none;*!
+        }*/
+        /* 属性选择器 选择所有 name=name1的p标签*/
+        p[name=name1]{
+            color: darkmagenta;
+        }
+        /*id>class>标签
+        复杂选择器
+        1.先比id 再比class 最后比标签
+        2. id个数不同 id个数越多 优先级越高
+        3. id相同 class 越多优先级越高
+        4 id class一样 比标签
+
+        */
+    </style>
+</head>
+<body>
+<div>
+    <h1>我是标题1</h1>
+    <h2>我是标题2</h2>
+    <span>我是spanhahhah</span>
+    <p>我是p标签1
+        <span>我是文本1
+            <span>我是span111</span>
+        </span>
+    </p>
+    <span>我是文本2</span>
+    <p class="cls1">我是p标签2</p>
+    <p name="name1">我是p标签3</p>
+    <p name="name2">我是p标签4</p>
+    <span>我是文本3
+        <span>我是span333</span>
+    </span>
+    <span>我是span444</span>
+</div>
+<ul class="ul1">
+    <li>1
+        <ul>
+            <li>111</li>
+            <li>222</li>
+            <li>333</li>
+            <li>444</li>
+        </ul>
+    </li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+
+</body>
+</html>
